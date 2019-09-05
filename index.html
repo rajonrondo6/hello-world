@@ -1,18 +1,463 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=640,target-densitydpi=320,user-scalable=no">
+<title>浦发信用卡</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
+<div class="loader_box">
+  <div class="load_img"></div>
+  <div class="loader">
+    <div class="progress-bar">
+      <div class="progress-stripes"></div>
+    </div>
+  </div>
+  <div class="percentage">0%</div>
+  <div class="loader_text red" style="display:none;">Loading...</div>
+</div>
+<script type="application/javascript">
+var demoImgArray = ["images/1-1.jpg","images/1-2.jpg","images/2-1.jpg","images/2-2.jpg","images/2-3.jpg","images/2-4.jpg","images/2-5.jpg","images/2-6.jpg","images/3-1.jpg","images/3-1.jpg",
+"images/4-1.jpg","images/4-2.jpg","images/4-3.jpg","images/5-1.jpg","images/5-2.jpg","images/5-3.jpg","images/6-1.jpg","images/6-2.jpg",
+"images/6-3.jpg","images/7-1.jpg","images/7-2.jpg","images/7-3.jpg","images/8-1.jpg","images/8-2.jpg","images/8-3.jpg",
+"images/9-1.jpg","images/9-2.jpg","images/9-3.jpg","images/10-1.jpg","images/10-2.jpg","images/yic.jpg","images/erc.jpg",
+"images/a1.png","images/a2.png","images/a3.png","images/a4.png","images/a5.png","images/a6.png","images/again.png","images/asj1.png",
+"images/b1.png","images/b2.png","images/b3.png","images/b4.png","images/b5.png","images/b6.png","images/ball1.png","images/ball2.png",
+"images/ball3.png","images/ball4.png","images/bg2.jpg","images/bglong.jpg","images/boy.png","images/c1.png","images/c2.png",
+"images/c3.png","images/c4.png","images/c5.png","images/c6.png","images/first.jpg","images/girl.png","images/go1.png",
+"images/go2.png","images/go4.png","images/go5.png","images/go7.png","images/go8.png","images/go10.png","images/go11.png",
+"images/h5.png","images/huan.png","images/input.png","images/introbg.png","images/ka-bg.jpg","images/kaka.jpg","images/load.jpg",
+"images/loading.png","images/music.png","images/nan1.png","images/nan2.png","images/nan3.png","images/nan4.png","images/nv1.png",
+"images/nv2.png","images/nv3.png","images/nv4.png","images/Q1.png","images/Q2.png","images/Q3.png","images/Q4.png","images/Q5.png","images/tiao.jpg","images/jinru.png",];
+</script>
+<audio id="bgm" class="media-audio" src="audio/music.mp3" autoplay="autoplay" preload="auto" loop="loop"></audio>
+<div class="wrapper">
+		<div class="name"></div>
+  <!--音乐-->
+  <div class="musicicon musicplay on"></div>
+  <!--进场-->
+  <div class="entry">
+  	<img class="gotop" width="100%" src="images/bglong.jpg" alt="" />
+  	<div class="text1"></div>
+  	<div class="text2"></div>
+  </div>
+  <!--插卡-->
+  <div class="ka">
+  	<div class="slogen"></div>
+  	<div class="slogen2"></div>
+  	<ul>
+  		<li class="ka1">
+  				<div class="ball4"></div>
+  		</li>
+  		<li class="ka2">
+  				<div class="ball3"></div>
+  		</li>
+  		<li class="ka3">
+  				<div class="ball2"></div>
+  		</li>
+  		<li class="ka4">
+  				<div class="ball1"></div>
+  		</li>
+  	</ul>
+  </div>
+	<!--选择性别-->
+	<div class="sex">
+		<div class="asj"></div>
+		<div class="ball4"></div>
+			<div class="man"></div>
+ 			<div class="woman"></div>
+	</div>
+ 	
+ 	<!--选择人物-->
+ 	<div class="sel select-man">
+ 			<div class="ym man-one"></div>
+ 				<div class="zhe">
+	 					<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nan1"></div>
+ 				</div>
+ 			<div class="ym man-two"></div>
+ 			<div class="zhe">
+ 						<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nan2"></div>
+ 			</div>
+ 			<div class="ym man-three"></div>
+ 			<div class="zhe">
+ 						<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nan3"></div>
+ 			</div>
+ 			<div class="ym man-four"></div>
+ 			<div class="zhe">
+ 						<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nan4"></div>
+ 			</div>
+ 	</div>
+ 	
+ 	<div class="sel select-woman">
+ 			<div class="nm woman-one" data-id="nv1"></div>
+ 			<div class="zhe">
+ 					<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nv1"></div>
+ 			</div>
+ 			<div class="nm woman-two" data-id="nv2"></div>
+ 			<div class="zhe">
+ 				<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nv2"></div>
+ 			</div>
+ 			<div class="nm woman-three" data-id="nv3"></div>
+ 			<div class="zhe">
+ 					<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nv3"></div>
+ 			</div>
+ 			<div class="nm woman-four" data-id="nv3"></div>
+ 			<div class="zhe">
+ 				<div class="what"></div>
+	 					<div class="put-bg"><input type="text" placeholder="输 入 您 的 姓 名"/></div>
+	 					<div class="huan"></div>
+	 					<div class="sure" data-id="nv4"></div>
+ 			</div>
+ 	</div>
+ 	<!--答题-->
+ 	<div class="question">
+ 			<div class="n one">
+ 					<div class="nei1">
+ 						<div class="one-1"></div>
+	 					<div class="xa1 xuan1 a"></div>
+	 					<div class="xb1 xuan1 b"></div>
+	 					<div class="xc1 xuan1 c"></div>
+ 					</div> 					
+ 					<div class="per nan1">
+ 						<div class="walk1"></div>
+ 						<div class="walk2"></div>
+ 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 							<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 							<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 			<div class="n two">
+ 				<div class="nei2">
+ 						<div class="two-1"></div>
+	 					<div class="xa2 xuan2 a"></div>
+	 					<div class="xb2 xuan2 b"></div>
+	 					<div class="xc2 xuan2 c"></div>
+ 				</div>
+ 					<div class="per nan1">
+ 							<div class="walk1"></div>
+	 						<div class="walk2"></div>
+	 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 							<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 						<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 			<div class="n three">
+ 				<div class="nei3">
+ 					<div class="three-1"></div>
+ 					<div class="xa3 xuan3 a"></div>
+ 					<div class="xb3 xuan3 b"></div>
+ 					<div class="xc3 xuan3 c"></div>
+ 				</div>
+ 					<div class="per nan1">
+ 							<div class="walk1"></div>
+	 						<div class="walk2"></div>
+	 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 							<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 							<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 			<div class="n four">
+ 				<div class="nei4">
+ 						<div class="four-1"></div>
+	 					<div class="xa4 xuan4 a"></div>
+	 					<div class="xb4 xuan4 b"></div>
+ 						<div class="xc4 xuan4 c"></div>
+ 				</div>
+ 					<div class="per nan1">
+ 							<div class="walk1"></div>
+	 						<div class="walk2"></div>
+	 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 							<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 							<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 			<div class="n five">
+ 				<div class="nei5">
+ 						<div class="five-1"></div>
+ 					<div class="xa5 xuan5 a"></div>
+ 					<div class="xb5 xuan5 b"></div>
+ 					<div class="xc5 xuan5 c"></div>
+ 				</div>
+ 					<div class="per nan1">
+ 							<div class="walk1"></div>
+	 						<div class="walk2"></div>
+	 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 						<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 							<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 			<div class="n six">
+ 				<div class="nei6">
+ 					<div class="six-1"></div>
+ 					<div class="xa6 xuan6 a"></div>
+ 					<div class="xb6 xuan6 b"></div>
+ 					<div class="xc6 xuan6 c"></div>
+ 				</div>
+ 					<div class="per nan1">
+ 							<div class="walk1"></div>
+	 						<div class="walk2"></div>
+	 						<div class="walk3"></div>
+ 					</div>
+ 					<div class="per nan2">
+ 							<div class="walk4"></div>
+	 						<div class="walk5"></div>
+	 						<div class="walk6"></div>
+ 					</div>
+ 					<div class="per nan3">
+ 							<div class="walk7"></div>
+	 						<div class="walk8"></div>
+	 						<div class="walk9"></div>
+ 					</div>
+ 					<div class="per nan4">
+ 							<div class="walk10"></div>
+	 						<div class="walk11"></div>
+	 						<div class="walk12"></div>
+ 					</div>
+ 					<div class="per nv1">
+ 							<div class="go1"></div>
+ 							<div class="go2"></div>
+ 							<div class="go3"></div>
+ 					</div>
+ 					<div class="per nv2">
+ 							<div class="go4"></div>
+ 							<div class="go5"></div>
+ 							<div class="go6"></div>
+ 					</div>
+ 					<div class="per nv3">
+ 							<div class="go7"></div>
+ 							<div class="go8"></div>
+ 							<div class="go9"></div>
+ 					</div>
+ 					<div class="per nv4">
+ 							<div class="go10"></div>
+ 							<div class="go11"></div>
+ 							<div class="go12"></div>
+ 					</div>
+ 			</div>
+ 	</div>
+ 	<div class="result">
+ 			<img id="ii" style="width: 480px; height: 853px; position: absolute;left: 80px;top: 50px;" src="" alt="" />
+ 			<div class="again"></div>
+ 			<div class="tiao"></div>
+ 			<div class="gogo"></div>
+ 			<div class="people"></div>
+ 			<div class="tip">
+ 				<div class="btn"></div>
+ 			</div>
+ 	</div>
+ 
+</div>
+<script type="application/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="application/javascript" src="js/jquery.loader.js"></script>
+<script type="application/javascript" src="js/sortable.js"></script>
+<script type="application/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+//原理是在微信执行Ready之前，先注册事件，所以放在所有请求的最前面
+document.addEventListener("WeixinJSBridgeReady", function () {
+	audioAutoPlay('bgm');//给个全局函数
+}, false);
+function audioAutoPlay(id){//全局控制播放函数
+	var audio = document.getElementById(id),
+	play = function(){
+		audio.play();
+		document.removeEventListener("touchstart",play, false);
+	};
+	audio.play();
+	document.addEventListener("touchstart",play, false);
+}
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
-
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-
+</script>
 </body>
 </html>
